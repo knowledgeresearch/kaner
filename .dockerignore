@@ -1,0 +1,10 @@
+.git/
+.vscode/
+.pytest_cache/
+env/
+data/datahub/
+data/modelhub/
+data/logs/trainer-*
+data/logs/dataset_reports.json
+data/logs/experiments.csv
+data/lab.ipynb

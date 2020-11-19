@@ -1,0 +1,44 @@
+# The field 'task' indicates the task we are executed, which is used
+# for logging.
+task: "NER"
+model: "mdgg"
+# The field 'dataset' indicates the sub-folder name of dataset in the
+# datahub folder. If it is misspelled, the trainer would not work.
+dataset: "weiboner"
+
+tokenizer_model: "gigaword"
+gazetteer_model: "gigaword"
+in_adapter: "in_mdgg"
+out_adapter: "out_seqlab"
+
+# The field 'data_folder' is used for indicating where the dataset,
+# logs, knowledge, and models are saved. Default value is './data/'.
+# You can delete it for convenient.
+data_folder: "./data"
+
+gpu: [0]
+dataset_pp: 1.0
+epoch: 50
+batch_size: 16
+early_stop_loss: 0.01
+stop_if_no_improvement: 15
+optim:
+    optimizer: "Adam"
+    lr_scheduler: "LambdaLR"
+    lr_lambda: "lambda epoch: 0.95 ** epoch"
+    lr: 0.001
+    lr_group:
+        bert: 0.00001
+    weight_decay: 0.00000001
+hyperparameters:
+    max_seq_len: 512
+    n_tokens: -1
+    n_lexicons: -1
+    n_tags: -1
+    token_dim: -1
+    lexicon_dim: -1
+    n_layers: 2
+    n_edge_types: -1
+    hidden_dim: 600
+    dropout: 0.5
+    n_steps: 2
