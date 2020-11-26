@@ -1,6 +1,6 @@
 ![KANER](./docs/_static/img/logo.png)
 # Introduction
-**KANER** (*Knowledge-Aware Named Entity Recognition*) is a toolkit with various knowledge-enhanced NER models aiming to facilitate development, expriment and test of these models. It provides a library of machine learning modules and the pipeline for training models.
+**KANER** (*Knowledge-Aware Named Entity Recognition*) is a toolkit with various knowledge-enhanced NER models to facilitate the development, experiment, and test of these models. It provides a library of machine learning modules and the pipeline for training models.
 
 # Getting Started
 ## Setup Environment
@@ -42,28 +42,31 @@ KANER currently provides the following NER models:
 - [MDGG](#) (**uid: mdgg**) released with the paper [A Neural Multi-digraph Model for Chinese NER with Gazetteers](https://www.aclweb.org/anthology/P19-1141/) by Ruixue Ding, Pengjun Xie, Xiaoyan Zhang, Wei Lu, Linlin Li, Luo Si.
 
 ### Quick tour
-Let's do a very quick tour of KANER. If you want to train a model, you just need to type the following command:
+Let's do a quick tour of KANER. If you want to train a model, you need to type the following command:
 
 ```bash
 python app.py train --cfgpath "./configs/blcrf.yml"
 ```
 
-If you haved trained a model on the dataset and want to do some case study for checking the model's performance, then you can use our service module that provides an online REST API to debug your model. More details can be found in the tutorial [service](./docs/tutorials/service.md).
+If you have trained a model on the dataset and want to do some case studies to check the model's performance, you can use our service module that provides an online REST API to debug your model. More details can be found in the tutorial [service](./docs/tutorials/service.md).
 
-Additionaly, we provide a series of notebooks in [notebooks/](notebooks/) that includes various experiments and data analysis.
+Additionally, we provide a series of notebooks (see [notebooks/](notebooks/)) that include various experiments and data analysis.
 
 
 # Build and Test
 ## Test
-We use [PyTest](https://docs.pytest.org/en/stable/) to help us to test this project. You just need to run the following command for testing this project:
+We use [PyTest](https://docs.pytest.org/en/stable/) to help us to test this project. You need to run the following command for testing this project:
 
 ```bash
 pytest ./tests/
 ```
 
 ## Build
-The following command help you to build a package. The detailed tutorial can be found in [Packaging Projects](https://packaging.python.org/tutorials/packaging-projects/).
+The following command helps you to build a package. The detailed tutorial can be found in [Packaging Projects](https://packaging.python.org/tutorials/packaging-projects/).
 
 ```bash
 python setup.py sdist bdist_wheel
 ```
+
+<hr/>
+🍃Enjoy it!
